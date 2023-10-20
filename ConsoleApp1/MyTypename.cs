@@ -1,7 +1,4 @@
-﻿using LanguageExt.ClassInstances.Pred;
-using System;
-
-namespace ConsoleApp1.Chassi
+﻿namespace ConsoleApp1.Chassi
 {
     abstract public class MyTypename
     {

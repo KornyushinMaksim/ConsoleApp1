@@ -2,7 +2,6 @@
 using ConsoleApp1.Chassi;
 using ConsoleApp1.Robot.Chassi;
 using ConsoleApp1.Robot;
-using LanguageExt.ClassInstances.Pred;
 
 namespace ConsoleApp1
 {
