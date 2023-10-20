@@ -1,9 +1,4 @@
 ﻿using ConsoleApp1.Chassi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1.Robot.Chassi
 {
@@ -22,13 +17,6 @@ namespace ConsoleApp1.Robot.Chassi
         {
             string str = string.Format("|{0,8} \t|{1,15}|{2,45}|{3,5}|{4,10}|",
                getName(), getDesignition(), getGUID(), getCnt(), isSale());
-            return str;
-        }
-
-        public string show(int value)
-        {
-            string str = string.Format("|{0,8} \t|{1,15}|{2,45}|{3,5}|{4,10}|",
-               getName(), getDesignition(), getGUID(), getCnt() * value, isSale());
             return str;
         }
     }

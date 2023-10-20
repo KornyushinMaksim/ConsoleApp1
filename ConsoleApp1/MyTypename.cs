@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LanguageExt.ClassInstances.Pred;
+using System;
 
 namespace ConsoleApp1.Chassi
 {
@@ -48,9 +45,18 @@ namespace ConsoleApp1.Chassi
             return this.sale;
         }
         
-        public string show()
+        public string show(int value)
         {
-            return String.Format("{0}\t{1}\t{2}\t{3}\t{4}", this.name, this.designation, this.GUID, this.cnt, this.sale);
+            string str = string.Format("|{0,15}|{1,45}|{2,5}|",
+               getName(), getGUID(), getCnt() * value);
+            return str;
+        }
+
+        public string showNomenlk(string strGUID)
+        {
+                string str = string.Format("|{0,45}|{1,45}|{2,5}|",
+                   strGUID, getGUID(), getCnt());
+                return str;
         }
     }
 }
