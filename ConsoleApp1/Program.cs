@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text;
 
 namespace ConsoleApp1
 {
@@ -12,51 +10,18 @@ namespace ConsoleApp1
         {
             Work work = new Work();
 
-
-
-
             Console.WriteLine(work.allTable());
             Console.WriteLine(work.nomenklatureTable());
             Console.WriteLine("Сколько роботов вам нужно?");
             int value = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(work.resTable(value));
 
+            //запись в файл сводной таблицы
             work.myWriter("1allTables.txt", work.allTable());
+            //запись в файл таблицы с зависимостями номенклатур
             work.myWriter("1nomenklatureTable.txt", work.nomenklatureTable());
-            work.myWriter("1resTable.txt", work.resTable(value));
-
-            //try
-            //{
-            //    StreamWriter write = new StreamWriter("1allTables.txt");
-            //    write.WriteLine(work.allTable());
-            //    write.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(ex.ToString());
-            //}
-
-            //try
-            //{
-            //    StreamWriter write = new StreamWriter("1nomenklatureTable.txt");
-            //    write.WriteLine(work.nomenklatureTable());
-            //    write.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(ex.ToString());
-            //}
-
-            //try
-            //{
-            //    StreamWriter write = new StreamWriter("1resTable.txt");
-            //    write.WriteLine(work.resTable(value));
-            //    write.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(ex.ToString());
-            //}
+            //запись в файл таблицы  с итоговым количеством
+            work.myWriter("1resTable.txt", work.resTable(value));       
         }
     }
 }
